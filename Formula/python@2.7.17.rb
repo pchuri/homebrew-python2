@@ -1,7 +1,8 @@
 class PythonAT2717 < Formula
   desc "Interpreted, interactive, object-oriented programming language"
   homepage "https://www.python.org/"
-  url "https://www.python.org/ftp/python/2.7.18/Python-2.7.18.tar.xz"
+  url "https://www.python.org/ftp/python/2.7.17/Python-2.7.17.tar.xz"
+  sha256 "4d43f033cdbd0aa7b7023c81b0e986fd11e653b5248dac9144d508f11812ba41"
   revision 1
   head "https://github.com/python/cpython.git", :branch => "2.7"
 
@@ -95,7 +96,7 @@ class PythonAT2717 < Formula
     end
 
     # Avoid linking to libgcc https://code.activestate.com/lists/python-dev/112195/
-    args << "MACOSX_DEPLOYMENT_TARGET=#{MacOS.version}"
+    args << "MACOSX_DEPLOYMENT_TARGET=#{MacOS.version.to_f}"
 
     # We want our readline and openssl! This is just to outsmart the detection code,
     # superenv handles that cc finds includes/libs!
