@@ -1,17 +1,10 @@
 # Homebrew Python2
 
-## Why?
-To have a following `Brewfile` possibility:
-
-```
-tap 'pchuri/homebrew-python2'
-brew 'pchuri/python2/python@2.7.17', args: ['build-from-source']
-```
-
 ## How do I install this formula?
-`brew install pchuri/python2/python@2.7.17 --build-from-source`
-
-Or `brew tap pchuri/python2` and then `brew install python@2.7.17 --build-from-source`.
+```bash
+brew tap pchuri/homebrew-python2
+brew install python@2
+```
 
 ## Limitations
 As unsupported packages do not have bottles we need to install from
